@@ -1,0 +1,50 @@
+2024-12-11 12:07:37,690  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Now listening on: http://localhost:5293
+2024-12-11 12:07:37,740  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+2024-12-11 12:07:37,744  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [0] - MESSAGE: Hosting environment: Development
+2024-12-11 12:07:37,745  INFO Microsoft.Hosting.Lifetime.Invoke [0] - MESSAGE: Content root path: C:\Users\Admin\Downloads\c#_practice\newDotnetProject
+2024-12-11 14:08:31,124  INFO Microsoft.Hosting.Lifetime.Invoke [0] - MESSAGE: Application is shutting down...
+2024-12-11 17:20:46,950  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Now listening on: http://localhost:5293
+2024-12-11 17:20:47,038  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+2024-12-11 17:20:47,041  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [0] - MESSAGE: Hosting environment: Development
+2024-12-11 17:20:47,042  INFO Microsoft.Hosting.Lifetime.Invoke [0] - MESSAGE: Content root path: C:\Users\Admin\Downloads\c#_practice\newDotnetProject
+2024-12-11 17:21:23,796  WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.? [?] - MESSAGE: Failed to determine the https port for redirect.
+2024-12-11 17:21:23,844  INFO NewDotnetProject.Controllers.HomeController.getStudents [26] - MESSAGE: getStudents method started....
+2024-12-11 17:21:23,850  INFO NewDotnetProject.Controllers.HomeController.getStudents [44] - MESSAGE: getStudents method ended....
+2024-12-11 17:41:19,059  INFO NewDotnetProject.Controllers.HomeController.testLogging [166] - MESSAGE: log from information method
+2024-12-11 17:41:19,064  WARN NewDotnetProject.Controllers.HomeController.testLogging [167] - MESSAGE: log from warning method
+2024-12-11 17:41:19,068 ERROR NewDotnetProject.Controllers.HomeController.testLogging [168] - MESSAGE: log from error method
+2024-12-11 17:41:19,070 FATAL NewDotnetProject.Controllers.HomeController.testLogging [169] - MESSAGE: log from critical method
+2024-12-11 17:46:22,855  INFO NewDotnetProject.Controllers.HomeController.getStudents [26] - MESSAGE: getStudents method started....
+2024-12-11 17:46:22,857  INFO NewDotnetProject.Controllers.HomeController.getStudents [44] - MESSAGE: getStudents method ended....
+2024-12-11 17:48:02,281  INFO NewDotnetProject.Controllers.HomeController.getStudents [26] - MESSAGE: getStudents method started....
+2024-12-11 17:48:02,284  INFO NewDotnetProject.Controllers.HomeController.getStudents [44] - MESSAGE: getStudents method ended....
+2024-12-11 18:25:15,129  INFO Microsoft.Hosting.Lifetime.Invoke [0] - MESSAGE: Application is shutting down...
+2024-12-11 19:43:20,685  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='collegeDB' AND TABLE_NAME='__EFMigrationsHistory';
+2024-12-11 19:43:20,867  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (31ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE `__EFMigrationsHistory` (
+    `MigrationId` varchar(150) CHARACTER SET utf8mb4 NOT NULL,
+    `ProductVersion` varchar(32) CHARACTER SET utf8mb4 NOT NULL,
+    CONSTRAINT `PK___EFMigrationsHistory` PRIMARY KEY (`MigrationId`)
+) CHARACTER SET=utf8mb4;
+2024-12-11 19:43:20,875  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='collegeDB' AND TABLE_NAME='__EFMigrationsHistory';
+2024-12-11 19:43:20,882  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `MigrationId`, `ProductVersion`
+FROM `__EFMigrationsHistory`
+ORDER BY `MigrationId`;
+2024-12-11 19:43:20,907  INFO Microsoft.EntityFrameworkCore.Migrations.? [?] - MESSAGE: Applying migration '20241211141030_InitialCreate'.
+2024-12-11 19:43:20,945  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER DATABASE CHARACTER SET utf8mb4;
+2024-12-11 19:43:20,980  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (34ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+CREATE TABLE `Students` (
+    `Id` int NOT NULL AUTO_INCREMENT,
+    `studentName` longtext CHARACTER SET utf8mb4 NOT NULL,
+    `studentEmail` longtext CHARACTER SET utf8mb4 NOT NULL,
+    `studentAddress` longtext CHARACTER SET utf8mb4 NOT NULL,
+    `DOB` datetime(6) NOT NULL,
+    CONSTRAINT `PK_Students` PRIMARY KEY (`Id`)
+) CHARACTER SET=utf8mb4;
+2024-12-11 19:43:20,986  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+INSERT INTO `__EFMigrationsHistory` (`MigrationId`, `ProductVersion`)
+VALUES ('20241211141030_InitialCreate', '8.0.2');
