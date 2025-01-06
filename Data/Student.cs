@@ -12,5 +12,8 @@ namespace NewDotnetProject.Data
           public string studentEmail {get; set;}
            public string studentAddress {get; set;}
              public DateTime DOB {get; set;}
-    }
+          public int? CollegeId { get; set; }
+
+        public virtual College? College { get; set; } 
+     }
 }

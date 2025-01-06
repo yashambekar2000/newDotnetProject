@@ -1,0 +1,5 @@
+2025-01-02 14:38:58,720  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Now listening on: http://localhost:5293
+2025-01-02 14:38:58,809  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+2025-01-02 14:38:58,816  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [0] - MESSAGE: Hosting environment: Development
+2025-01-02 14:38:58,816  INFO Microsoft.Hosting.Lifetime.Invoke [0] - MESSAGE: Content root path: C:\Users\Admin\Downloads\newDotnetProject
+2025-01-02 14:39:37,561  WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.? [?] - MESSAGE: Failed to determine the https port for redirect.

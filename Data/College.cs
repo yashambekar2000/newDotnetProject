@@ -12,6 +12,8 @@ namespace NewDotnetProject.Data
          public int Id {get; set;}
          public string collegeName {get; set;}
            public string collegeAddress {get; set;}
+          public virtual ICollection<Student> Students { get; set; }
+
     
     }
 }

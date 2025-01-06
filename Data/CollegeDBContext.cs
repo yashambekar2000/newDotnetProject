@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using NewDotnetProject.Data.Config;
 using NewDotnetProject.Models;
 
 namespace NewDotnetProject.Data
@@ -15,17 +16,20 @@ namespace NewDotnetProject.Data
        public DbSet<Student> Students {get; set;}
          public DbSet<College> Colleges {get; set;}
 
-        // Override OnConfiguring method to specify MySQL connection string
-    // protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    // {
-    //      if (!optionsBuilder.IsConfigured)
-    //     {
-    //         optionsBuilder.UseMySql(
-    //             _configuration.GetConnectionString("MySqlConnection"),
-    //             new MySqlServerVersion(new Version(10, 0, 23))
-    //         );
-    //     }
-    
-    // }
+           public DbSet<User> Users {get; set;}
+            public DbSet<Item> Items {get; set;}
+            public DbSet<SavedItem> SavedItems { get; set; }
+
+
+         protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            //Table 1
+            modelBuilder.ApplyConfiguration(new StudentConfig());
+            modelBuilder.ApplyConfiguration(new CollegeConfig());
+             modelBuilder.ApplyConfiguration(new UserConfig());
+              modelBuilder.ApplyConfiguration(new ItemConfig());
+              modelBuilder.ApplyConfiguration(new SavedItemConfig());
+           
+        }
     }
 }

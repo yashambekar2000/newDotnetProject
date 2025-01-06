@@ -1,0 +1,11 @@
+2024-12-14 15:12:21,383  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Now listening on: http://localhost:5293
+2024-12-14 15:12:21,449  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+2024-12-14 15:12:21,453  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [0] - MESSAGE: Hosting environment: Development
+2024-12-14 15:12:21,453  INFO Microsoft.Hosting.Lifetime.Invoke [0] - MESSAGE: Content root path: C:\Users\Admin\Downloads\newDotnetProject
+2024-12-14 15:12:48,077  WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.? [?] - MESSAGE: Failed to determine the https port for redirect.
+2024-12-14 15:12:48,770  INFO NewDotnetProject.Controllers.HomeController.MoveNext [40] - MESSAGE: getStudents method started....
+2024-12-14 15:12:49,591  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`DOB`, `s`.`studentAddress`, `s`.`studentEmail`, `s`.`studentName`
+FROM `Students` AS `s`
+2024-12-14 15:12:49,695  INFO NewDotnetProject.Controllers.HomeController.MoveNext [76] - MESSAGE: getStudents method ended....
+2024-12-14 19:13:48,648  INFO Microsoft.Hosting.Lifetime.Invoke [0] - MESSAGE: Application is shutting down...

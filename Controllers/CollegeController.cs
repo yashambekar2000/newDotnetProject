@@ -23,18 +23,19 @@ namespace newDotnetProject.Controllers
       [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<IEnumerable<ModelAlias.CollegeDTO>>> getColleges(){
+    public async Task<ActionResult<IEnumerable<DataAlias.College>>> getColleges(){
       _logger.LogInformation("getColleges method started....");
      
-        var colleges = await _context.Colleges
-                                      .Select(college => new ModelAlias.CollegeDTO()
-                                      {
-                                          Id = college.Id,
-                                          collegeName = college.collegeName,
-                                          collegeAddress = college.collegeAddress
+        // var colleges = await _context.Colleges
+        //                               .Select(college => new ModelAlias.CollegeDTO()
+        //                               {
+        //                                   Id = college.Id,
+        //                                   collegeName = college.collegeName,
+        //                                   collegeAddress = college.collegeAddress
                                         
-                                      })
-                                      .ToListAsync();
+        //                               })
+        //                               .ToListAsync();
+        var colleges = await _context.Colleges.ToListAsync();
 
        _logger.LogInformation("getColleges method ended....");
        return Ok(colleges);
