@@ -48,7 +48,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<CollegeDBContext>(options =>
     options.UseMySql(
         builder.Configuration.GetConnectionString("MySqlConnection"),
-        new MySqlServerVersion(new Version(10, 4, 22))
+        new MySqlServerVersion(new Version(10, 4, 22)),
+     mysqlOptions => mysqlOptions.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null) // Retry settings
+
     )
 );
 
@@ -75,8 +77,8 @@ builder.Services.AddAuthentication( options =>{
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+// Enable middleware for serving generated Swagger as a JSON endpoint.
+if (app.Environment.IsDevelopment() || app.Environment.IsEnvironment("Production"))
 {
     app.UseSwagger();
     app.UseSwaggerUI();

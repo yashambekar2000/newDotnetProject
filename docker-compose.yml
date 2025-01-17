@@ -1,0 +1,36 @@
+version: '3.4'
+networks:
+  dev:
+    driver: bridge
+services:
+  app-demo:
+    image: docker.io/library/web-api-app
+    depends_on:
+     - "collegedb"
+    container_name: cool_franklin
+    ports:
+      - "5000:8080"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - ConnectionStrings__DefaultConnection=User=root;Password=yash123;Server=mysql;Port=3306;Database=collegedb;
+      - ASPNETCORE_URLS=http://+:8080
+    networks:
+      - dev
+  app_db:
+    image: mysql:latest
+    container_name: mysql
+    environment:
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=yash123
+      - MYSQL_DB=collegedb
+    ports:
+      - "3306:3306"
+    restart: always
+    volumes:
+      - app_data:/var/lib/mysql/data
+    networks:
+      - dev
+volumes:
+  app_data:
