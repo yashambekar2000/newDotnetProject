@@ -5,13 +5,11 @@ using ModelAlias = NewDotnetProject.Models;
 
 namespace newDotnetProject.Controllers
 {
-    [Route("api/[controller]")]
+ [Route("api/[controller]")]
  [ApiController]
     public class CollegeController : ControllerBase{
-        private readonly ILogger<CollegeController> _logger;
-            private readonly DataAlias.CollegeDBContext _context;
-
-
+    private readonly ILogger<CollegeController> _logger;
+    private readonly DataAlias.CollegeDBContext _context;
    public CollegeController(ILogger<CollegeController> logger, DataAlias.CollegeDBContext context){
       _logger = logger;
     _context = context;

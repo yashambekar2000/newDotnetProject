@@ -14,8 +14,13 @@ namespace NewDotnetProject.Data.Repository
             _dbContext = dbContext;
             _dbSet = _dbContext.Set<T>();
         }
-         public async Task<List<T>>  getAllAsync(){
+         public async Task<List<T>>  getAllAsync(Expression<Func<T , bool>> filter = null){
+            if (filter != null)
+            {
+                return await _dbSet.Where(filter).ToListAsync();
+            }
             return await _dbSet.ToListAsync();
+            //  return await _dbSet.where;
          }
         public async Task<T>  getStudentByAsync(Expression<Func<T , bool>> filter /* --> predicates and Delegatges */, bool useNoTracking = false){
             if(useNoTracking)

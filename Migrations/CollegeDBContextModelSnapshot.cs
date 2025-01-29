@@ -58,6 +58,35 @@ namespace newDotnetProject.Migrations
                         });
                 });
 
+            modelBuilder.Entity("NewDotnetProject.Data.GetHomeImages", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("category")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("gender")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("image_url")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("HomeImages");
+                });
+
             modelBuilder.Entity("NewDotnetProject.Data.Item", b =>
                 {
                     b.Property<int>("Id")

@@ -1,0 +1,73 @@
+2025-01-21 11:04:44,892  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Now listening on: http://localhost:5293
+2025-01-21 11:04:45,075  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+2025-01-21 11:04:45,079  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [0] - MESSAGE: Hosting environment: Development
+2025-01-21 11:04:45,080  INFO Microsoft.Hosting.Lifetime.Invoke [0] - MESSAGE: Content root path: /Users/yash.ambekar/Downloads/dotNetProject/newDotnetProject
+2025-01-21 11:04:55,977  WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.? [?] - MESSAGE: Failed to determine the https port for redirect.
+2025-01-21 11:04:59,583  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (136ms) [Parameters=[@p0='?' (Size = 250), @p1='?' (Size = 250), @p2='?' (Size = 500)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Users` (`email`, `name`, `password`)
+VALUES (@p0, @p1, @p2);
+SELECT `Id`
+FROM `Users`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2025-01-21 11:05:11,907  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 250), @p1='?' (Size = 250), @p2='?' (Size = 500)], CommandType='Text', CommandTimeout='30']
+INSERT INTO `Users` (`email`, `name`, `password`)
+VALUES (@p0, @p1, @p2);
+SELECT `Id`
+FROM `Users`
+WHERE ROW_COUNT() = 1 AND `Id` = LAST_INSERT_ID();
+2025-01-21 11:05:50,778  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CollegeId`, `s`.`DOB`, `s`.`studentAddress`, `s`.`studentEmail`, `s`.`studentName`
+FROM `Students` AS `s`
+WHERE `s`.`Id` = @__id_0
+LIMIT 1
+2025-01-21 11:05:59,446  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CollegeId`, `s`.`DOB`, `s`.`studentAddress`, `s`.`studentEmail`, `s`.`studentName`
+FROM `Students` AS `s`
+WHERE `s`.`Id` = @__id_0
+LIMIT 1
+2025-01-21 11:06:22,059  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CollegeId`, `s`.`DOB`, `s`.`studentAddress`, `s`.`studentEmail`, `s`.`studentName`
+FROM `Students` AS `s`
+WHERE `s`.`Id` = @__id_0
+LIMIT 1
+2025-01-21 11:06:22,062  WARN NewDotnetProject.Controllers.HomeController.MoveNext [138] - MESSAGE: Student with id not found.
+2025-01-21 11:06:30,446  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `s`.`Id`, `s`.`CollegeId`, `s`.`DOB`, `s`.`studentAddress`, `s`.`studentEmail`, `s`.`studentName`
+FROM `Students` AS `s`
+WHERE `s`.`Id` = @__id_0
+LIMIT 1
+2025-01-21 11:06:30,548  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (18ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+DELETE FROM `Students`
+WHERE `Id` = @p0;
+SELECT ROW_COUNT();
+2025-01-21 11:06:41,008  INFO NewDotnetProject.Controllers.HomeController.testLogging [280] - MESSAGE: log from information method
+2025-01-21 11:06:41,015  WARN NewDotnetProject.Controllers.HomeController.testLogging [281] - MESSAGE: log from warning method
+2025-01-21 11:06:41,018 ERROR NewDotnetProject.Controllers.HomeController.testLogging [282] - MESSAGE: log from error method
+2025-01-21 11:06:41,019 FATAL NewDotnetProject.Controllers.HomeController.testLogging [283] - MESSAGE: log from critical method
+2025-01-21 11:08:03,569  INFO newDotnetProject.Controllers.CollegeController.MoveNext [27] - MESSAGE: getColleges method started....
+2025-01-21 11:08:03,617  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`collegeAddress`, `c`.`collegeName`
+FROM `Colleges` AS `c`
+2025-01-21 11:08:03,638  INFO newDotnetProject.Controllers.CollegeController.MoveNext [40] - MESSAGE: getColleges method ended....
+2025-01-21 11:18:50,633  INFO Microsoft.Hosting.Lifetime.Invoke [0] - MESSAGE: Application is shutting down...
+2025-01-21 11:19:02,182  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Now listening on: http://localhost:5293
+2025-01-21 11:19:02,229  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+2025-01-21 11:19:02,233  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [0] - MESSAGE: Hosting environment: Development
+2025-01-21 11:19:02,234  INFO Microsoft.Hosting.Lifetime.Invoke [0] - MESSAGE: Content root path: /Users/yash.ambekar/Downloads/dotNetProject/newDotnetProject
+2025-01-21 11:19:58,458  WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.? [?] - MESSAGE: Failed to determine the https port for redirect.
+2025-01-21 11:19:59,940  INFO NewDotnetProject.Controllers.HomeController.testLogging [280] - MESSAGE: log from information method
+2025-01-21 11:19:59,942  WARN NewDotnetProject.Controllers.HomeController.testLogging [281] - MESSAGE: log from warning method
+2025-01-21 11:19:59,942 ERROR NewDotnetProject.Controllers.HomeController.testLogging [282] - MESSAGE: log from error method
+2025-01-21 11:19:59,943 FATAL NewDotnetProject.Controllers.HomeController.testLogging [283] - MESSAGE: log from critical method
+2025-01-21 11:20:41,865  INFO Microsoft.Hosting.Lifetime.Invoke [0] - MESSAGE: Application is shutting down...
+2025-01-21 11:23:04,893  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Now listening on: http://localhost:5293
+2025-01-21 11:23:04,969  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+2025-01-21 11:23:04,985  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [0] - MESSAGE: Hosting environment: Development
+2025-01-21 11:23:04,986  INFO Microsoft.Hosting.Lifetime.Invoke [0] - MESSAGE: Content root path: /Users/yash.ambekar/Downloads/dotNetProject/newDotnetProject
+2025-01-21 11:23:13,491  WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.? [?] - MESSAGE: Failed to determine the https port for redirect.
+2025-01-21 11:23:15,315  INFO NewDotnetProject.Controllers.HomeController.testLogging [280] - MESSAGE: log from information method
+2025-01-21 11:23:15,337  WARN NewDotnetProject.Controllers.HomeController.testLogging [281] - MESSAGE: log from warning method
+2025-01-21 11:23:15,339 ERROR NewDotnetProject.Controllers.HomeController.testLogging [282] - MESSAGE: log from error method
+2025-01-21 11:23:15,339 FATAL NewDotnetProject.Controllers.HomeController.testLogging [283] - MESSAGE: log from critical method
+2025-01-21 11:30:14,455  INFO Microsoft.Hosting.Lifetime.Invoke [0] - MESSAGE: Application is shutting down...

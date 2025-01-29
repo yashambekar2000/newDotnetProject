@@ -1,6 +1,4 @@
 
-
-
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -14,18 +12,14 @@ using ModelAlias = NewDotnetProject.Models;
 
 namespace newDotnetProject.Controllers
 {
-    [Route("api/[controller]")]
+ [Route("api/[controller]")]
  [ApiController]
     public class AuthController : ControllerBase
   {
-
     private readonly ILogger<AuthController> _logger;
     private readonly IMapper _mapper;
-    // private readonly  ICollegeRepository<Student> _studentRepo;
     private readonly  IUserRepository _userRepo;
-
     private readonly IConfiguration _configuration;
-
     public AuthController(ILogger<AuthController> logger, IMapper mapper,IUserRepository userRepo, IConfiguration configuration)
     {
       _logger = logger;
@@ -39,7 +33,7 @@ namespace newDotnetProject.Controllers
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-public async Task<ActionResult<ModelAlias.UserDTO>> createUser([FromBody] ModelAlias.UserDTO model)
+    public async Task<ActionResult<ModelAlias.UserDTO>> createUser([FromBody] ModelAlias.UserDTO model)
         {
         if (model == null) return BadRequest();
         var user = _mapper.Map<DataAlias.User>(model);
@@ -60,7 +54,6 @@ public async Task<ActionResult<ModelAlias.UserDTO>> createUser([FromBody] ModelA
             if (string.IsNullOrEmpty(model.Email) || string.IsNullOrEmpty(model.Password)) {
                 return BadRequest("Email or password cannot be null or empty.");
             }
-                // var user = _mapper.Map<DataAlias.User>(model);
                 var getRes = await _userRepo.checkUser(model.Email, model.Password);
 
                 if (getRes == null) {
@@ -73,22 +66,20 @@ public async Task<ActionResult<ModelAlias.UserDTO>> createUser([FromBody] ModelA
                 var tokenDescriptor = new SecurityTokenDescriptor(){
                     Subject = new System.Security.Claims.ClaimsIdentity(new Claim[]
                     {
+                          new Claim(ClaimTypes.NameIdentifier, userDto.Id.ToString()), // User ID in token
                          new Claim(ClaimTypes.Email , model.Email),
                          new Claim(ClaimTypes.Role ,  "Admin")
                     }),
                     Expires = DateTime.Now.AddHours(4),
-                    SigningCredentials = new(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha512Signature)
-                  
+                    SigningCredentials = new(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha512Signature)   
                 };
-                    var token = tokenHandler.CreateToken(tokenDescriptor);
+                 var token = tokenHandler.CreateToken(tokenDescriptor);
                  var token1 =  tokenHandler.WriteToken(token);
-                  var loginResponseDTO = new LoginResponseDTO{
+                 var loginResponseDTO = new LoginResponseDTO{
                     user = userDto,
                     token = token1
                   };
-                return Ok(loginResponseDTO);
-            
+                return Ok(loginResponseDTO); 
     }
-
-    }
+  }
 }

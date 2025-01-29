@@ -18,6 +18,7 @@ namespace NewDotnetProject.Data
 
            public DbSet<User> Users {get; set;}
             public DbSet<Item> Items {get; set;}
+             public DbSet<GetHomeImages> HomeImages {get; set;}
             public DbSet<SavedItem> SavedItems { get; set; }
 
 

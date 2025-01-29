@@ -31,6 +31,22 @@ namespace NewDotnetProject.Data.Repository
             return savedItems;
         }
 
+        public async Task<bool> DeleteSavedItems(int userId, int itemId)
+            {
+                var savedItem = await _DBContext.SavedItems
+                    .FirstOrDefaultAsync(si => si.UserId == userId && si.ItemId == itemId);
+
+                if (savedItem == null)
+                {
+                    return false; // आयटम सापडला नाही
+                }
+
+                _DBContext.SavedItems.Remove(savedItem);
+                await _DBContext.SaveChangesAsync();
+
+                return true; // यशस्वीरित्या डिलीट झाला
+            }
+
         public async Task<bool> SaveItems(int UserId, int ItemId){
                    var existingSavedItem = await _DBContext.SavedItems
         .FirstOrDefaultAsync(si => si.UserId == UserId && si.ItemId == ItemId);
