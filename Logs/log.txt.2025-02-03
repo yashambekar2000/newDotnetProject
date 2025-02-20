@@ -1,0 +1,179 @@
+2025-02-03 12:02:57,331  INFO Microsoft.Hosting.Lifetime.? [?] - MESSAGE: Now listening on: http://localhost:5293
+2025-02-03 12:02:58,810  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [0] - MESSAGE: Application started. Press Ctrl+C to shut down.
+2025-02-03 12:02:58,827  INFO Microsoft.Hosting.Lifetime.OnApplicationStarted [0] - MESSAGE: Hosting environment: Development
+2025-02-03 12:02:58,828  INFO Microsoft.Hosting.Lifetime.Invoke [0] - MESSAGE: Content root path: /Users/yash.ambekar/Downloads/dotNetProject/newDotnetProject
+2025-02-03 12:03:15,261  WARN Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.? [?] - MESSAGE: Failed to determine the https port for redirect.
+2025-02-03 12:03:23,141  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (234ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `h`.`Id`, `h`.`category`, `h`.`gender`, `h`.`image_url`, `h`.`name`
+FROM `HomeImages` AS `h`
+2025-02-03 12:03:23,141  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (234ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `h`.`Id`, `h`.`category`, `h`.`gender`, `h`.`image_url`, `h`.`name`
+FROM `HomeImages` AS `h`
+2025-02-03 12:03:27,468  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (14ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `h`.`Id`, `h`.`category`, `h`.`gender`, `h`.`image_url`, `h`.`name`
+FROM `HomeImages` AS `h`
+2025-02-03 12:03:27,541  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `h`.`Id`, `h`.`category`, `h`.`gender`, `h`.`image_url`, `h`.`name`
+FROM `HomeImages` AS `h`
+2025-02-03 12:03:36,237  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (34ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `h`.`Id`, `h`.`category`, `h`.`gender`, `h`.`image_url`, `h`.`name`
+FROM `HomeImages` AS `h`
+2025-02-03 12:03:36,551  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `h`.`Id`, `h`.`category`, `h`.`gender`, `h`.`image_url`, `h`.`name`
+FROM `HomeImages` AS `h`
+2025-02-03 12:03:48,198  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `h`.`Id`, `h`.`category`, `h`.`gender`, `h`.`image_url`, `h`.`name`
+FROM `HomeImages` AS `h`
+2025-02-03 12:03:48,251  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `h`.`Id`, `h`.`category`, `h`.`gender`, `h`.`image_url`, `h`.`name`
+FROM `HomeImages` AS `h`
+2025-02-03 12:03:54,486  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (94ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `h`.`Id`, `h`.`category`, `h`.`gender`, `h`.`image_url`, `h`.`name`
+FROM `HomeImages` AS `h`
+2025-02-03 12:03:54,746  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (67ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `h`.`Id`, `h`.`category`, `h`.`gender`, `h`.`image_url`, `h`.`name`
+FROM `HomeImages` AS `h`
+2025-02-03 12:06:54,475  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (10ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `h`.`Id`, `h`.`category`, `h`.`gender`, `h`.`image_url`, `h`.`name`
+FROM `HomeImages` AS `h`
+2025-02-03 12:06:54,798  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `h`.`Id`, `h`.`category`, `h`.`gender`, `h`.`image_url`, `h`.`name`
+FROM `HomeImages` AS `h`
+2025-02-03 12:28:33,729  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `h`.`Id`, `h`.`category`, `h`.`gender`, `h`.`image_url`, `h`.`name`
+FROM `HomeImages` AS `h`
+2025-02-03 12:28:34,425  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `h`.`Id`, `h`.`category`, `h`.`gender`, `h`.`image_url`, `h`.`name`
+FROM `HomeImages` AS `h`
+2025-02-03 12:34:00,359  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (99ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `h`.`Id`, `h`.`category`, `h`.`gender`, `h`.`image_url`, `h`.`name`
+FROM `HomeImages` AS `h`
+2025-02-03 12:34:00,483  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `h`.`Id`, `h`.`category`, `h`.`gender`, `h`.`image_url`, `h`.`name`
+FROM `HomeImages` AS `h`
+2025-02-03 12:36:56,307  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (694ms) [Parameters=[@__email_0_contains='?' (Size = 250), @__password_1_contains='?' (Size = 500)], CommandType='Text', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`email`, `u`.`name`, `u`.`password`
+FROM `Users` AS `u`
+WHERE (`u`.`email` LIKE @__email_0_contains) AND (`u`.`password` LIKE @__password_1_contains)
+LIMIT 1
+2025-02-03 12:36:56,756  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `h`.`Id`, `h`.`category`, `h`.`gender`, `h`.`image_url`, `h`.`name`
+FROM `HomeImages` AS `h`
+2025-02-03 12:36:56,826  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `h`.`Id`, `h`.`category`, `h`.`gender`, `h`.`image_url`, `h`.`name`
+FROM `HomeImages` AS `h`
+2025-02-03 12:36:56,969  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (70ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `i`.`Id`, `i`.`category`, `i`.`description`, `i`.`gender`, `i`.`image_url`, `i`.`name`, `i`.`new_price`, `i`.`old_price`, `i`.`stock`
+FROM `Items` AS `i`
+2025-02-03 12:36:57,163  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `i`.`Id`, `i`.`category`, `i`.`description`, `i`.`gender`, `i`.`image_url`, `i`.`name`, `i`.`new_price`, `i`.`old_price`, `i`.`stock`
+FROM `Items` AS `i`
+2025-02-03 12:36:57,451  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (264ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `s`.`ItemId` AS `Id`, `i`.`name`, `i`.`description`, `i`.`new_price`, `i`.`old_price`, `i`.`gender`, `i`.`category`, `i`.`image_url`
+FROM `SavedItems` AS `s`
+INNER JOIN `Items` AS `i` ON `s`.`ItemId` = `i`.`Id`
+WHERE `s`.`UserId` = @__userId_0
+2025-02-03 12:37:10,696  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `h`.`Id`, `h`.`category`, `h`.`gender`, `h`.`image_url`, `h`.`name`
+FROM `HomeImages` AS `h`
+2025-02-03 12:37:10,897  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `i`.`Id`, `i`.`category`, `i`.`description`, `i`.`gender`, `i`.`image_url`, `i`.`name`, `i`.`new_price`, `i`.`old_price`, `i`.`stock`
+FROM `Items` AS `i`
+2025-02-03 12:37:13,694  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (10ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `s`.`ItemId` AS `Id`, `i`.`name`, `i`.`description`, `i`.`new_price`, `i`.`old_price`, `i`.`gender`, `i`.`category`, `i`.`image_url`
+FROM `SavedItems` AS `s`
+INNER JOIN `Items` AS `i` ON `s`.`ItemId` = `i`.`Id`
+WHERE `s`.`UserId` = @__userId_0
+2025-02-03 12:37:13,737  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `s`.`ItemId` AS `Id`, `i`.`name`, `i`.`description`, `i`.`new_price`, `i`.`old_price`, `i`.`gender`, `i`.`category`, `i`.`image_url`
+FROM `SavedItems` AS `s`
+INNER JOIN `Items` AS `i` ON `s`.`ItemId` = `i`.`Id`
+WHERE `s`.`UserId` = @__userId_0
+2025-02-03 12:37:17,735  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__itemId_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `s`.`UserId`, `s`.`ItemId`
+FROM `SavedItems` AS `s`
+WHERE (`s`.`UserId` = @__userId_0) AND (`s`.`ItemId` = @__itemId_1)
+LIMIT 1
+2025-02-03 12:37:18,156  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (71ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SET AUTOCOMMIT = 1;
+DELETE FROM `SavedItems`
+WHERE `ItemId` = @p0 AND `UserId` = @p1;
+SELECT ROW_COUNT();
+2025-02-03 12:37:18,195  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (9ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `s`.`ItemId` AS `Id`, `i`.`name`, `i`.`description`, `i`.`new_price`, `i`.`old_price`, `i`.`gender`, `i`.`category`, `i`.`image_url`
+FROM `SavedItems` AS `s`
+INNER JOIN `Items` AS `i` ON `s`.`ItemId` = `i`.`Id`
+WHERE `s`.`UserId` = @__userId_0
+2025-02-03 12:37:27,963  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `h`.`Id`, `h`.`category`, `h`.`gender`, `h`.`image_url`, `h`.`name`
+FROM `HomeImages` AS `h`
+2025-02-03 12:37:27,993  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `i`.`Id`, `i`.`category`, `i`.`description`, `i`.`gender`, `i`.`image_url`, `i`.`name`, `i`.`new_price`, `i`.`old_price`, `i`.`stock`
+FROM `Items` AS `i`
+2025-02-03 12:37:28,047  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `i`.`Id`, `i`.`category`, `i`.`description`, `i`.`gender`, `i`.`image_url`, `i`.`name`, `i`.`new_price`, `i`.`old_price`, `i`.`stock`
+FROM `Items` AS `i`
+2025-02-03 12:37:28,075  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (43ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `h`.`Id`, `h`.`category`, `h`.`gender`, `h`.`image_url`, `h`.`name`
+FROM `HomeImages` AS `h`
+2025-02-03 12:37:43,066  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (4ms) [Parameters=[@__email_0_contains='?' (Size = 250), @__password_1_contains='?' (Size = 500)], CommandType='Text', CommandTimeout='30']
+SELECT `u`.`Id`, `u`.`email`, `u`.`name`, `u`.`password`
+FROM `Users` AS `u`
+WHERE (`u`.`email` LIKE @__email_0_contains) AND (`u`.`password` LIKE @__password_1_contains)
+LIMIT 1
+2025-02-03 12:37:43,190  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (11ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `h`.`Id`, `h`.`category`, `h`.`gender`, `h`.`image_url`, `h`.`name`
+FROM `HomeImages` AS `h`
+2025-02-03 12:37:43,190  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (11ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `s`.`ItemId` AS `Id`, `i`.`name`, `i`.`description`, `i`.`new_price`, `i`.`old_price`, `i`.`gender`, `i`.`category`, `i`.`image_url`
+FROM `SavedItems` AS `s`
+INNER JOIN `Items` AS `i` ON `s`.`ItemId` = `i`.`Id`
+WHERE `s`.`UserId` = @__userId_0
+2025-02-03 12:37:43,207  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `h`.`Id`, `h`.`category`, `h`.`gender`, `h`.`image_url`, `h`.`name`
+FROM `HomeImages` AS `h`
+2025-02-03 12:37:43,224  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `i`.`Id`, `i`.`category`, `i`.`description`, `i`.`gender`, `i`.`image_url`, `i`.`name`, `i`.`new_price`, `i`.`old_price`, `i`.`stock`
+FROM `Items` AS `i`
+2025-02-03 12:37:43,240  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `i`.`Id`, `i`.`category`, `i`.`description`, `i`.`gender`, `i`.`image_url`, `i`.`name`, `i`.`new_price`, `i`.`old_price`, `i`.`stock`
+FROM `Items` AS `i`
+2025-02-03 12:37:52,514  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `h`.`Id`, `h`.`category`, `h`.`gender`, `h`.`image_url`, `h`.`name`
+FROM `HomeImages` AS `h`
+2025-02-03 12:37:52,518  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `i`.`Id`, `i`.`category`, `i`.`description`, `i`.`gender`, `i`.`image_url`, `i`.`name`, `i`.`new_price`, `i`.`old_price`, `i`.`stock`
+FROM `Items` AS `i`
+2025-02-03 12:37:55,182  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `s`.`ItemId` AS `Id`, `i`.`name`, `i`.`description`, `i`.`new_price`, `i`.`old_price`, `i`.`gender`, `i`.`category`, `i`.`image_url`
+FROM `SavedItems` AS `s`
+INNER JOIN `Items` AS `i` ON `s`.`ItemId` = `i`.`Id`
+WHERE `s`.`UserId` = @__userId_0
+2025-02-03 12:37:55,218  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (8ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `s`.`ItemId` AS `Id`, `i`.`name`, `i`.`description`, `i`.`new_price`, `i`.`old_price`, `i`.`gender`, `i`.`category`, `i`.`image_url`
+FROM `SavedItems` AS `s`
+INNER JOIN `Items` AS `i` ON `s`.`ItemId` = `i`.`Id`
+WHERE `s`.`UserId` = @__userId_0
+2025-02-03 12:37:59,852  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `i`.`Id`, `i`.`category`, `i`.`description`, `i`.`gender`, `i`.`image_url`, `i`.`name`, `i`.`new_price`, `i`.`old_price`, `i`.`stock`
+FROM `Items` AS `i`
+2025-02-03 12:37:59,873  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `i`.`Id`, `i`.`category`, `i`.`description`, `i`.`gender`, `i`.`image_url`, `i`.`name`, `i`.`new_price`, `i`.`old_price`, `i`.`stock`
+FROM `Items` AS `i`
+2025-02-03 12:37:59,874  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (8ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `h`.`Id`, `h`.`category`, `h`.`gender`, `h`.`image_url`, `h`.`name`
+FROM `HomeImages` AS `h`
+2025-02-03 12:37:59,898  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT `h`.`Id`, `h`.`category`, `h`.`gender`, `h`.`image_url`, `h`.`name`
+FROM `HomeImages` AS `h`
+2025-02-03 14:09:18,789  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (73ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `s`.`ItemId` AS `Id`, `i`.`name`, `i`.`description`, `i`.`new_price`, `i`.`old_price`, `i`.`gender`, `i`.`category`, `i`.`image_url`
+FROM `SavedItems` AS `s`
+INNER JOIN `Items` AS `i` ON `s`.`ItemId` = `i`.`Id`
+WHERE `s`.`UserId` = @__userId_0
+2025-02-03 14:09:19,005  INFO Microsoft.EntityFrameworkCore.Database.Command.? [?] - MESSAGE: Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT `s`.`ItemId` AS `Id`, `i`.`name`, `i`.`description`, `i`.`new_price`, `i`.`old_price`, `i`.`gender`, `i`.`category`, `i`.`image_url`
+FROM `SavedItems` AS `s`
+INNER JOIN `Items` AS `i` ON `s`.`ItemId` = `i`.`Id`
+WHERE `s`.`UserId` = @__userId_0
+2025-02-03 19:35:13,285  INFO Microsoft.Hosting.Lifetime.Invoke [0] - MESSAGE: Application is shutting down...

@@ -8,11 +8,9 @@ using NewDotnetProject.Data.Repository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
-var key = Encoding.ASCII.GetBytes(builder.Configuration.GetValue<string>("JWTSecret"));
-
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddControllers().AddNewtonsoftJson();
@@ -42,7 +40,52 @@ builder.Logging.AddLog4Net();
 #endregion
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+// ************* Swagger Authorization *******************
+builder.Services.AddSwaggerGen(options =>
+{
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Description = "JWT Authorization header using the bearer scheme. Enter 'Bearer' [space] then your token. Example: Bearer dssvfhszljcldssfdj#$",
+        Name = "Authorization",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.Http, 
+        Scheme = "Bearer"
+    });
+
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Id = "Bearer",
+                    Type = ReferenceType.SecurityScheme
+                }
+            },
+            new List<string>()
+        }
+    });
+});
+
+// JWT authentication configuration
+var key = Encoding.ASCII.GetBytes(builder.Configuration.GetValue<string>("JWTSecret"));
+
+builder.Services.AddAuthentication( options =>{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(options => {
+    // options.RequireHttpsMetadata = false;
+    options.SaveToken = true;
+    options.TokenValidationParameters = new  TokenValidationParameters()
+    {
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey  = new SymmetricSecurityKey(key),
+        ValidateAudience = false,
+        ValidateIssuer = false
+    };
+});
+
 
 // Add services to the container. ======= Registration of database connection ============
 builder.Services.AddDbContext<CollegeDBContext>(options =>
@@ -58,22 +101,6 @@ builder.Services.AddCors(options => options.AddPolicy("MyTestCors" , Policy =>{
     // Allow all origins 
     Policy.WithOrigins("http://localhost:3000").AllowAnyHeader().AllowAnyMethod();
 }));
-
-// JWT authentication configuration
-builder.Services.AddAuthentication( options =>{
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-}).AddJwtBearer(options => {
-    // options.RequireHttpsMetadata = false;
-    options.SaveToken = true;
-    options.TokenValidationParameters = new  TokenValidationParameters()
-    {
-        ValidateIssuerSigningKey = true,
-        IssuerSigningKey  = new SymmetricSecurityKey(key),
-        ValidateAudience = false,
-        ValidateIssuer = false
-    };
-});
 
 var app = builder.Build();
 
